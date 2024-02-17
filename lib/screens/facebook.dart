@@ -1,4 +1,5 @@
 import 'package:facebook_ui_app/screens/widgets/icon_bar.dart';
+import 'package:facebook_ui_app/screens/widgets/new_post_bar.dart';
 import 'package:facebook_ui_app/screens/widgets/tool_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -25,9 +26,13 @@ class _FacebookHomeState extends State<FacebookHome> {
       backgroundColor: Colors.grey.shade900,
       body: Column(
         children: [
-          const ToolBar(), 
-          IconBar(profilePic: profilePic)],
-          
+          const ToolBar(),
+          IconBar(profilePic: profilePic),
+          const Divider(
+            thickness: 1,
+          ),
+          NewPostBar(profilePic: profilePic)
+        ],
       ),
     );
   }
