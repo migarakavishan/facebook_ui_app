@@ -47,7 +47,10 @@ class _FacebookHomeState extends State<FacebookHome> {
                   child: Container(
                     width: 100,
                     height: 160,
-                    color: Colors.amber,
+                    color: Colors.grey.shade600,
+                    child: const Stack(
+                      children: [],
+                    ),
                   ),
                 );
               },
