@@ -31,7 +31,28 @@ class _FacebookHomeState extends State<FacebookHome> {
           const Divider(
             thickness: 1,
           ),
-          NewPostBar(profilePic: profilePic)
+          NewPostBar(profilePic: profilePic),
+          const Divider(
+            color: Colors.black38,
+            thickness: 10,
+          ),
+          SizedBox(
+            height: 160,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: 6,
+              itemBuilder: (context, index) {
+                return Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    width: 100,
+                    height: 160,
+                    color: Colors.amber,
+                  ),
+                );
+              },
+            ),
+          )
         ],
       ),
     );
