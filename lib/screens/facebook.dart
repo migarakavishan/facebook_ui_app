@@ -37,19 +37,33 @@ class _FacebookHomeState extends State<FacebookHome> {
             thickness: 10,
           ),
           SizedBox(
-            height: 160,
+            height: 176,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: 6,
+              itemCount: 5,
               itemBuilder: (context, index) {
                 return Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
                     width: 100,
                     height: 160,
-                    color: Colors.grey.shade600,
-                    child: const Stack(
-                      children: [],
+                    decoration: BoxDecoration(
+                        color: Colors.grey.shade600,
+                        borderRadius: BorderRadius.circular(15)),
+                    child: Stack(
+                      children: [
+                        Container(
+                          width: 100,
+                          height: 110,
+                          decoration: BoxDecoration(
+                              borderRadius: const BorderRadius.only(
+                                  topLeft: Radius.circular(15),
+                                  topRight: Radius.circular(15)),
+                              image: DecorationImage(
+                                  image: NetworkImage(profilePic),
+                                  fit: BoxFit.cover)),
+                        )
+                      ],
                     ),
                   ),
                 );
