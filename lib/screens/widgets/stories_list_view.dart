@@ -5,16 +5,12 @@ class StoriesListView extends StatelessWidget {
   StoriesListView({
     super.key,
     required this.profilePic,
+    
   });
 
   final String profilePic;
 
   final List<StoryModel> stories = [
-    StoryModel(
-        story: "story",
-        uid: "uid",
-        userImage: "userImage",
-        userName: "userName"),
     StoryModel(
         story:
             "https://www.mynrma.com.au/-/media/2021-best-cars-ford-mustang-hero-desktop.jpg?h=501&iar=0&w=1140&hash=4DAA34C7D70E8A1501F91AE808C0B351",

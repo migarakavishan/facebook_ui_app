@@ -1,5 +1,6 @@
 import 'package:facebook_ui_app/screens/widgets/icon_bar.dart';
 import 'package:facebook_ui_app/screens/widgets/new_post_bar.dart';
+import 'package:facebook_ui_app/screens/widgets/post_list_view.dart';
 import 'package:facebook_ui_app/screens/widgets/stories_list_view.dart';
 import 'package:facebook_ui_app/screens/widgets/tool_bar.dart';
 import 'package:flutter/material.dart';
@@ -32,36 +33,24 @@ class _FacebookHomeState extends State<FacebookHome> {
           const Divider(
             thickness: 1,
           ),
-          NewPostBar(profilePic: profilePic),
-          const Divider(
-            color: Colors.black38,
-            thickness: 10,
-          ),
-          StoriesListView(profilePic: profilePic),
-          const Divider(
-            color: Colors.black38,
-            thickness: 10,
-          ),
-          Column(
-            children: [
-              Row(
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
                 children: [
-                  Container(
-                    width: 40,
-                    height: 40,
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(color: Colors.blue, width: 2)),
-                    child: Padding(
-                      padding: const EdgeInsets.all(2.0),
-                      child: CircleAvatar(
-                        backgroundImage: NetworkImage(profilePic),
-                      ),
-                    ),
-                  )
+                  NewPostBar(profilePic: profilePic),
+                  const Divider(
+                    color: Colors.black38,
+                    thickness: 10,
+                  ),
+                  StoriesListView(profilePic: profilePic),
+                  const Divider(
+                    color: Colors.black38,
+                    thickness: 10,
+                  ),
+                  PostListView(profilePic: profilePic)
                 ],
-              )
-            ],
+              ),
+            ),
           )
         ],
       ),
