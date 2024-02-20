@@ -37,7 +37,32 @@ class _FacebookHomeState extends State<FacebookHome> {
             color: Colors.black38,
             thickness: 10,
           ),
-          StoriesListView(profilePic: profilePic)
+          StoriesListView(profilePic: profilePic),
+          const Divider(
+            color: Colors.black38,
+            thickness: 10,
+          ),
+          Column(
+            children: [
+              Row(
+                children: [
+                  Container(
+                    width: 40,
+                    height: 40,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(color: Colors.blue, width: 2)),
+                    child: Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: CircleAvatar(
+                        backgroundImage: NetworkImage(profilePic),
+                      ),
+                    ),
+                  )
+                ],
+              )
+            ],
+          )
         ],
       ),
     );
